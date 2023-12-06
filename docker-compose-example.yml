@@ -1,0 +1,16 @@
+services:
+  studipscraper:
+    image: scraper
+    environment:
+      - username=username
+      - password=password
+
+    volumes:
+      - ~/downloads:/scraper/studip-downloads
+    # Host Netzwerk für VPN geschichte mit Cisco. Man muss
+    # sich vorher einfach mit der VPN verbinden.
+    # Planen das irgendwann so, dass es einfach in einem Netzwerk mit nen Cisco VPN docker
+    # container ist
+    network_mode: host
+# volumes:
+  # downloads:/scraper/studip_downloads
